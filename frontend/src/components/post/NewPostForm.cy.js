@@ -10,7 +10,6 @@ describe("Creating a new Post", () => {
         cy.get("#message").type("this is a new message");
         cy.get("#submit").click();
         cy.wait('@newPostRequest').then( interception => {
-            cy.log(interception.response.body)
             expect(interception.response.body.message).to.eq("OK")
         })
     })
