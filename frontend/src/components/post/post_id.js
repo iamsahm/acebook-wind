@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
 const PostId = () => {
-    const [post, setPost] = useState({ message: '', author: '' });
+    const [post, setPost] = useState({});
 
     const { id } = useParams();
 
@@ -18,9 +18,6 @@ const PostId = () => {
                 })
             
         }, [id]);
-    useEffect(() => {
-            console.log('here is the',post)
-        }, [post]);
     
         return(
             <div >
